@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>FriendFinder Survey</title>
 </head>
 
 <body>
-
     <div id="MyModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5  id="friend-name" class="modal-title">Your Best Match</h5>
+                    <h5 id="friend-name" class="modal-title">Your Best Match</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -27,7 +26,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -45,7 +43,7 @@
         <h2>Question 1</h2>
         <p>Your mind is always buzzing with unexplored ideas and plans.</p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect1">
                 <option>1</option>
                 <option>2</option>
@@ -58,7 +56,7 @@
         <h2>Question 2</h2>
         <p>Generally speaking, you rely more on your experience than your imagination.</p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect2">
                 <option>1</option>
                 <option>2</option>
@@ -71,7 +69,7 @@
         <h2>Question 3</h2>
         <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect3">
                 <option>1</option>
                 <option>2</option>
@@ -84,7 +82,7 @@
         <h2>Question 4</h2>
         <p>You rarely do something just out of sheer curiosity.</p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect4">
                 <option>1</option>
                 <option>2</option>
@@ -97,7 +95,7 @@
         <h2>Question 5</h2>
         <p>People can rarely upset you.</p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect5">
                 <option>1</option>
                 <option>2</option>
@@ -110,7 +108,7 @@
         <h2>Question 6</h2>
         <p>It is often difficult for you to relate to other people’s feelings.</p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect6">
                 <option>1</option>
                 <option>2</option>
@@ -123,7 +121,7 @@
         <h2>Question 7</h2>
         <p>In a discussion, truth should be more important than people’s sensitivities.</p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect7">
                 <option>1</option>
                 <option>2</option>
@@ -136,7 +134,7 @@
         <h2>Question 8</h2>
         <p>You rarely get carried away by fantasies and ideas.</p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect8">
                 <option>1</option>
                 <option>2</option>
@@ -150,7 +148,7 @@
         <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
         </p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect9">
                 <option>1</option>
                 <option>2</option>
@@ -163,7 +161,7 @@
         <h2>Question 10</h2>
         <p>You feel more energetic after spending time with a group of people.</p>
         <div class="form-group" style="width: 157px;">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1">Select a choice</label>
             <select class="form-control" id="exampleFormControlSelect10">
                 <option>1</option>
                 <option>2</option>
@@ -186,9 +184,19 @@
         </footer>
     </div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
     <script type="text/javascript">
         $("#submit").on("click", function (event) {
             event.preventDefault();
+            //yoinks answers from inputs
             let answers = [$("#exampleFormControlSelect1").val(),
             $("#exampleFormControlSelect2").val(),
             $("#exampleFormControlSelect3").val(),
@@ -200,6 +208,7 @@
             $("#exampleFormControlSelect9").val(),
             $("#exampleFormControlSelect10").val()];
 
+            //makes a person object for the user's inputs
             var newDude = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
@@ -208,16 +217,17 @@
 
             console.log(newDude);
 
+            //makes post request, then...
             $.post("/api/friends", newDude)
-                .then(function(res){
+                .then(function (res) {
+                    //shows the result (from apipaths) to the user
                     console.log(res);
                     $("#friend-name").text(res.name);
                     $("#result-img").attr("src", res.photo);
-                    $('#MyModal').modal('show');
+                    $('#MyModal').modal(focus);
                 });
         });
     </script>
-
 </body>
 
 </html>
