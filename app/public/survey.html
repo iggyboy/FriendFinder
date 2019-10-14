@@ -12,6 +12,27 @@
 </head>
 
 <body>
+
+    <div id="MyModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5  id="friend-name" class="modal-title">Your Best Match</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="result-pic" class="modal-body">
+                    <img id="result-img" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <h1>FriendFinder Survey</h1>
         <hr>
@@ -187,7 +208,13 @@
 
             console.log(newDude);
 
-            $.post("/api/friends", newDude);
+            $.post("/api/friends", newDude)
+                .then(function(res){
+                    console.log(res);
+                    $("#friend-name").text(res.name);
+                    $("#result-img").attr("src", res.photo);
+                    $('#MyModal').modal('show');
+                });
         });
     </script>
 

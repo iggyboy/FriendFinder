@@ -7,24 +7,24 @@ module.exports = function (app) {
     });
 
     app.post('/api/friends', function (req, res) {
-        let newDude = req.body;
-        console.log(newDude.scores);
-        //compare and return
         let differences = [];
-        for (let j = 0; j < newDude.scores.length; j++) {
+        let newDude = req.body;
+        friendses = friends;
+        //compare and return
+        for (var j = 0; j < friendses.length; j++) { 
             let diff = 0;
-            for (let i = 0; i < friends[j].scores.length; i++) {
-                diff += Math.abs(parseInt(friends[j].scores[i])  - parseInt(newDude.scores[i]));
+            for (var i = 0; i < friendses[j].scores.length; i++) {
+                diff += Math.abs(parseInt(friendses[j].scores[i]) - parseInt(newDude.scores[i]));
             }
             differences.push(diff);
         }
-        let theGuyIndex = differences.indexOf(Math.min(differences));
-        //
-        console.log(newDude);
-
+        console.log(differences);
+        let theGuyIndex = differences.indexOf(Math.min(...differences));
+        console.log(theGuyIndex);
         friends.push(newDude);
-        res.send(theGuyIndex);
-        res.sendStatus(200);
+        console.log("Your best friend is.....", friendses[theGuyIndex]);
+
+        res.json(friendses[theGuyIndex]);
     });
 
 }
